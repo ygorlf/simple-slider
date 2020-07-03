@@ -1,0 +1,76 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  height: 90vh;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Navigation Custom Styles */
+.tns-outer {
+  position: relative;
+}
+
+.tns-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  margin: .5rem 0;
+}
+
+.tns-nav > button {
+  width: 20px;
+  height: 20px;
+  margin: 0 8px;
+  border: 1px solid #505050;
+
+  outline: none;
+  border-radius: 50%;
+  background: #505050;
+}
+
+.tns-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+
+  pointer-events: none;
+
+  transform: translateY(-50%);
+}
+
+.tns-controls > button:first-child,
+.tns-controls > button:last-child {
+  width: 90px;
+  height: 90px;
+  border: none;
+  outline: none;
+
+  pointer-events: auto;
+
+  background: url('./icons/arrow.svg');
+  background-size: contain;
+}
+
+.tns-controls > button:last-child {
+  transform: rotate(180deg);
+}
